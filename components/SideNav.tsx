@@ -16,7 +16,7 @@ export function SideNav() {
     <nav className="sidenav">
       {items.map((item) => (
         <div key={item.title}>
-          <span>{item.title}</span>
+          <span className="text-xs font-bold underline">{item.title}</span>
           <ul className="flex column">
             {item.links.map((link) => {
               const active = router.pathname === link.href;
@@ -39,11 +39,6 @@ export function SideNav() {
             overflow-y: auto;
             padding: 2.5rem 2rem 2rem;
             border-right: 1px solid var(--border-color);
-          }
-          span {
-            font-size: larger;
-            font-weight: 500;
-            padding: 0.5rem 0 0.5rem;
           }
           ul {
             padding: 0;
